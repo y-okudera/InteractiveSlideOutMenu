@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cYr-YY-X1k">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hM4-v4-hyz">
+            <objects>
+                <navigationController id="cYr-YY-X1k" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4AD-lp-8u7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Iyt-4y-w7Y" kind="relationship" relationship="rootViewController" id="65b-xg-HjC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvz-zG-ChF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="-3"/>
+        </scene>
+        <!--MainViewController-->
+        <scene sceneID="1Os-Pj-jOT">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Iyt-4y-w7Y" customClass="MainViewController" customModule="InteractiveSlideOutMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TCt-Ks-8GX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="ydV-Hg-Y2A"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7Zr-h3-g71" appends="YES" id="ro7-cR-vj6"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="MainViewController" id="wdQ-2K-hEt">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburger_menu" id="qeU-C5-IVC">
+                            <connections>
+                                <action selector="didTapMenuButton:" destination="Iyt-4y-w7Y" id="7hp-4W-o6G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQh-Wr-8li" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="7Zr-h3-g71">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="screenEdgePanGesture:" destination="Iyt-4y-w7Y" id="o4K-HR-VRt"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="244" y="-3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hamburger_menu" width="24" height="24"/>
+    </resources>
+</document>
