@@ -44,7 +44,7 @@ struct MenuHelper {
         }
     }
 
-    static func mapGestureStateToInteractor(gestureState: UIGestureRecognizerState,
+    static func mapGestureStateToInteractor(gestureState: UIGestureRecognizer.State,
                                             progress: CGFloat,
                                             interactor: Interactor?,
                                             triggerTransition: () -> ()) {
